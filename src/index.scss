@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-image: linear-gradient(
+    to left top,
+    #a9e1f0,
+    #91e7f2,
+    #79edef,
+    #66f3e4,
+    #5df7d4,
+    #4bf5d6,
+    #34f2d8,
+    #00f0da,
+    #00e5ee,
+    #00d8fa,
+    #3cc9fc,
+    #6cbaf5
+  );
+  background-size: 400%;
+  animation: bg-body-animation 5s infinite alternate;
+}
+
+.card-btn {
+  line-height: 39px;
+  background-image: linear-gradient(180deg, #9b7efa 0%, #7e5ae1 100%);
+  transition: background-color 1s linear;
+  transition: transform 2s;
+}
+
+.card-btn:hover {
+  background-image: linear-gradient(
+    to left top,
+    #a9e1f0,
+    #91e7f2,
+    #79edef,
+    #66f3e4,
+    #5df7d4,
+    #4bf5d6,
+    #34f2d8,
+    #00f0da,
+    #00e5ee,
+    #00d8fa,
+    #3cc9fc,
+    #6cbaf5
+  );
+  color: #ecedfb;
+  transform: translateX(-2rem);
+  transition: transform 0.7s;
+}
+
+@keyframes bg-body-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@media (max-width: 768px) {
+  .view-section {
+    background-image: linear-gradient(
+      to left top,
+      #a9e1f0,
+      #91e7f2,
+      #79edef,
+      #66f3e4,
+      #5df7d4,
+      #4bf5d6,
+      #34f2d8,
+      #00f0da,
+      #00e5ee,
+      #00d8fa,
+      #3cc9fc,
+      #6cbaf5
+    );
+    background-size: 400%;
+    animation: bg-body-animation 5s infinite alternate;
+  }
+}
