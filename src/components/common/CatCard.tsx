@@ -34,8 +34,8 @@ export default function CatCard({
     <LazyMotion features={domAnimation}>
       <m.div
         whileHover={{ scale: 0.975 }}
-        transition={{ duration: 0.8, ease: 'linear' }}
-        className='gap-2 w-full h-full bg-white rounded-lg shadow-lg items-center'
+        transition={{ duration: 0.7, ease: 'linear' }}
+        className='flex flex-col w-full h-full bg-white rounded-lg shadow-lg'
       >
         <img
           className='rounded-t-lg w-100 object-cover'
@@ -43,20 +43,26 @@ export default function CatCard({
           alt={name}
         />
 
-        <div className='flex flex-col gap-5 p-6 text-[#373d59]'>
+        <div className='flex flex-col flex-grow gap-5 h-full justify-between p-6 text-[#373d59]'>
           <m.h3
+            // initial={{ scale: 0, opacity: 0 }} // left it here for showing different approach in implementation
+            // whileInView={{ scale: 1, opacity: 1 }}
+            // transition={{ duration: 0.7, ease: 'linear' }}
             initial='hidden'
             whileInView='visible'
-            custom={1}
+            custom={2.5}
             variants={titleAnimation}
             className='font-bold sm:text-3xl text-2xl pb-4 border-b-2 border-[#ededed]'
           >
             {name}
           </m.h3>
           <m.p
+            // initial={{ scaleZ: 0, opacity: 0 }} // left it here for showing different approach in implementation
+            // whileInView={{ scaleZ: 1, opacity: 1 }}
+            // transition={{ duration: 0.8, ease: 'linear' }}
             initial='hidden'
             whileInView='visible'
-            custom={2}
+            custom={3.5}
             variants={descriptionAnimation}
             className='pb-4 border-b-2 border-[#ededed]'
           >

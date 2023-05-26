@@ -6,5 +6,6 @@ export const headerTitleAnimation = {
   visible: {
     x: 0,
     opacity: 1,
+    transition: { duration: 1 },
   },
 };
