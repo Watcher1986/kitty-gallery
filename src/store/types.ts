@@ -39,7 +39,7 @@ export interface IBreed {
   wikipedia_url: string;
   hypoallergenic: number;
   reference_image_id: string;
-  image: {
+  image?: {
     height: number;
     id: string;
     url: string;

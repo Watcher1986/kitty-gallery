@@ -16,19 +16,19 @@ export default function CatsBreedsGallery() {
   return (
     <>
       <Preloader />
-      <section className='view-section p-4 grid-cols-auto-fit gap-4 md:bg-[#e6f4f1] lg:bg-[#e6f4f1] min-h-screen'>
+      <section className='p-4 bg-transparent min-h-screen'>
         <LazyMotion features={domAnimation}>
           <m.h2
             initial='hidden'
             whileInView='visible'
             viewport={{ amount: 0.3 }}
             variants={headerTitleAnimation}
-            className='title py-4 text-4xl text-[#373d59] font-bold'
+            className='title py-5 text-[2.5rem] text-[#373d59] font-bold'
           >
             Cats Breeds Gallery
           </m.h2>
         </LazyMotion>
-        <div className='grid md:grid-cols-auto-fit lg:grid-cols-auto-fit gap-4'>
+        <div className='media-container'>
           {catsBreedsList.map((breed: IBreed, index: number) => (
             <CatCard key={`breed.id-${index}`} breed={breed} />
           ))}

@@ -5,7 +5,7 @@ export default {
     extend: {
       marginInline: {},
       gridTemplateColumns: {
-        'auto-fit': 'repeat(auto-fit, minmax(525px, 1fr))',
+        'auto-fit': 'repeat(auto-fill, minmax(300px, 1fr))',
       },
     },
   },

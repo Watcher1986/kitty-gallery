@@ -33,6 +33,13 @@ body {
   box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.62);
 }
 
+.media-container {
+  --gap: 0.75rem;
+  display: block;
+  columns: 300px 4;
+  gap: var(--gap);
+}
+
 .card-btn:hover {
   background-image: linear-gradient(
     to left top,
@@ -50,7 +57,7 @@ body {
     #6cbaf5
   );
   color: #ecedfb;
-  transform: translateX(-2rem);
+  transform: translateX(-1.25rem);
   transition: transform 0.7s;
 }
 
@@ -60,27 +67,5 @@ body {
   }
   100% {
     background-position: right;
-  }
-}
-
-@media (max-width: 768px) {
-  .view-section {
-    background-image: linear-gradient(
-      to left top,
-      #a9e1f0,
-      #91e7f2,
-      #79edef,
-      #66f3e4,
-      #5df7d4,
-      #4bf5d6,
-      #34f2d8,
-      #00f0da,
-      #00e5ee,
-      #00d8fa,
-      #3cc9fc,
-      #6cbaf5
-    );
-    background-size: 400%;
-    animation: bg-body-animation 5s infinite alternate;
   }
 }

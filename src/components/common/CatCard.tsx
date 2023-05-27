@@ -16,7 +16,7 @@ export default function CatCard({
 }: CardProps) {
   const dispatch = useDispatch();
   const { randomImage, isLoading } = useSelector((state) => state.breeds);
-  const [cardImage, setCardImage] = useState(image.url);
+  const [cardImage, setCardImage] = useState(image?.url);
 
   useEffect(() => {
     const { url, breed_id } = randomImage;
@@ -35,7 +35,7 @@ export default function CatCard({
       <m.div
         whileHover={{ scale: 0.975 }}
         transition={{ duration: 0.7, ease: 'linear' }}
-        className={`flex flex-col w-full h-full min-h-[400px] bg-white rounded-lg shadow-lg ${
+        className={`flex flex-col h-fit mb-3 bg-white rounded-lg shadow-lg break-inside-avoid overflow-hidden ${
           isLoading ? 'opacity-50' : ''
         }`}
       >
