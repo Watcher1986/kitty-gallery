@@ -28,6 +28,9 @@ body {
   background-image: linear-gradient(180deg, #9b7efa 0%, #7e5ae1 100%);
   transition: background-color 1s linear;
   transition: transform 2s;
+  -webkit-box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.62);
+  box-shadow: 1px 3px 13px -3px rgba(0, 0, 0, 0.62);
 }
 
 .card-btn:hover {
