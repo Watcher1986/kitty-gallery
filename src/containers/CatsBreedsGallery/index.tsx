@@ -23,7 +23,7 @@ export default function CatsBreedsGallery() {
             whileInView='visible'
             viewport={{ amount: 0.3 }}
             variants={headerTitleAnimation}
-            className='title py-5 text-[2.5rem] text-[#373d59] font-bold'
+            className='title py-5 text-[2.5rem] text-[#fff] font-bold'
           >
             Cats Breeds Gallery
           </m.h2>

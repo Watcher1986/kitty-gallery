@@ -4,23 +4,12 @@
 
 body {
   font-family: 'Noto Sans', sans-serif;
-  background-image: linear-gradient(
-    to left top,
-    #a9e1f0,
-    #91e7f2,
-    #79edef,
-    #66f3e4,
-    #5df7d4,
-    #4bf5d6,
-    #34f2d8,
-    #00f0da,
-    #00e5ee,
-    #00d8fa,
-    #3cc9fc,
-    #6cbaf5
-  );
-  background-size: 400%;
-  animation: bg-body-animation 5s infinite alternate;
+  background-image: url('/qqquad.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #43464e;
+  background-size: 300%;
+  animation: bg-body-animation 25s infinite alternate;
 }
 
 .card-btn {

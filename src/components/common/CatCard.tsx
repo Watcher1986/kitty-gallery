@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, memo } from 'react';
 import { useDispatch, useSelector } from '../../store/hooks/reduxHooks';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 
@@ -11,9 +11,7 @@ type CardProps = {
   breed: IBreed;
 };
 
-export default function CatCard({
-  breed: { image, name, description, id },
-}: CardProps) {
+function CatCard({ breed: { image, name, description, id } }: CardProps) {
   const dispatch = useDispatch();
   const { randomImage, isLoading } = useSelector((state) => state.breeds);
   const [cardImage, setCardImage] = useState(image?.url);
@@ -83,3 +81,5 @@ export default function CatCard({
     </LazyMotion>
   );
 }
+
+export default memo(CatCard);
