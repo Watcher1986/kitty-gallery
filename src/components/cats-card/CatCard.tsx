@@ -15,16 +15,19 @@ function CatCard({ breed: { image, name, description, id } }: CardProps) {
   const dispatch = useDispatch();
   const { randomImage, isLoading } = useSelector((state) => state.breeds);
   const [cardImage, setCardImage] = useState(image?.url);
+  const [isImgChanged, setIsImgChanged] = useState(false);
 
   useEffect(() => {
     const { url, breed_id } = randomImage;
 
     if (breed_id === id) {
       setCardImage(url);
+      setIsImgChanged(false);
     }
   }, [randomImage]);
 
   const handleChangeImage = useCallback(() => {
+    setIsImgChanged(true);
     dispatch(getRandomKitty({ id }));
   }, [id, dispatch]);
 
@@ -33,9 +36,7 @@ function CatCard({ breed: { image, name, description, id } }: CardProps) {
       <m.div
         whileHover={{ scale: 0.975 }}
         transition={{ duration: 0.7, ease: 'linear' }}
-        className={`flex flex-col h-fit mb-3 bg-white rounded-lg shadow-lg break-inside-avoid overflow-hidden ${
-          isLoading ? 'opacity-50' : ''
-        }`}
+        className='relative flex flex-col h-fit mb-3 bg-white rounded-lg shadow-lg break-inside-avoid overflow-hidden'
       >
         <img
           className='rounded-t-lg w-100 object-cover'
@@ -77,6 +78,10 @@ function CatCard({ breed: { image, name, description, id } }: CardProps) {
             Change image
           </button>
         </div>
+        {/* shadow effect on change image */}
+        {isImgChanged && isLoading && (
+          <div className='absolute inset-0 opacity-75 bg-[#a1a1a1] rounded-lg shadow-inner' />
+        )}
       </m.div>
     </LazyMotion>
   );

@@ -2,8 +2,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useSelector } from '../../store/hooks/reduxHooks';
 
 import { useLazyLoadingBreeds } from '../../utils/hooks/useLazyLoadingBreeds';
-import CatCard from '../../components/common/CatCard';
-import { Preloader } from '../../components/Preloader';
+import CatCard from '../../components/cats-card/CatCard';
 
 import { IBreed } from '../../store/types';
 import { headerTitleAnimation } from './animation-configs';
@@ -15,8 +14,7 @@ export default function CatsBreedsGallery() {
 
   return (
     <>
-      <Preloader />
-      <section className='p-4 bg-transparent min-h-screen'>
+      <section className='p-4 bg-transparent min-h-screen z-0'>
         <LazyMotion features={domAnimation}>
           <m.h2
             initial='hidden'

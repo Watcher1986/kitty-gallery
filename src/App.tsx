@@ -1,11 +1,15 @@
-import { AppLayout } from './components/layouts/AppLayout';
+import { AppLayout } from './layouts/AppLayout';
+import { Preloader } from './components/Preloader';
 import CatsBreedsGallery from './containers/CatsBreedsGallery';
 
 function App() {
   return (
-    <AppLayout>
-      <CatsBreedsGallery />
-    </AppLayout>
+    <>
+      <Preloader />
+      <AppLayout>
+        <CatsBreedsGallery />
+      </AppLayout>
+    </>
   );
 }
 
